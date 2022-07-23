@@ -1,8 +1,8 @@
-import { Pressable, StyleSheet, Text, View } from "react-native"
+import { Pressable, StyleSheet, Text, View, Platform } from "react-native"
 
 function CategoryGridTile({title, data}){
     return <View style={styles.gridItem}>
-        <Pressable style={styles.button}>
+        <Pressable style={styles.button} android_ripple={{color: "#ccc"}}>
             <View style={styles.innerContainer}>
                 <Text style={styles.title}>{title}</Text>
             </View>
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 8,
+        overflow: Platform.OS === 'android' ? 'hidden' : 'visible'  // to hide the android ripple around the corners. But it also disables the styling in iOS. To rectify it use Platform.OS.
     },
     button:{
         flex: 1
