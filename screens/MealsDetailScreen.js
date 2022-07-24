@@ -20,7 +20,9 @@ function MealDetailScreen({route, navigation}){
         navigation.setOptions({
             headerRight: () =>{
                 return <IconButton onPress={headerButtonPressHandler} icon="star" color="white"/>
-            }
+            },
+            title: 'Meal Details', 
+            headerTitleAlign: 'center'
         })
     },[])
 
