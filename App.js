@@ -7,6 +7,7 @@ import MealsOverviewScreen from './screens/MealsOverviewScreen';
 import MealDetailScreen from './screens/MealsDetailScreen';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import FavoriteScreen from './screens/FavoriteScreen';
+import { Ionicons } from '@expo/vector-icons'
 
 const Stack = createNativeStackNavigator() 
 const Drawer = createDrawerNavigator()
@@ -16,14 +17,23 @@ function DrawerNavigator(){
         screenOptions={{                              // to apply in all of the screens
           headerStyle: {backgroundColor: '#351401'},            
           headerTintColor: 'white',
-          sceneContainerStyle: { backgroundColor: '#3f2f25' }
+          sceneContainerStyle: { backgroundColor: '#3f2f25' },
+          drawerContentStyle: { backgroundColor: '#351401' },
+          drawerInactiveTintColor: 'white',
+          drawerActiveTintColor: '#351401',
+          drawerActiveBackgroundColor: '#e4baa1'
         }}
     >
     <Drawer.Screen name="Categories" component={CategoriesScreen} options={{
       title: 'The Recipe Book',
       headerTitleAlign: 'center',
+      drawerIcon: ({color, size}) => <Ionicons name="list" color={color} size={size} />
     }}/>
-    <Drawer.Screen name="Favorites" component={FavoriteScreen}/>
+    <Drawer.Screen name="Favorites" component={FavoriteScreen} options={{
+      title: 'Your Favorites',
+      headerTitleAlign: 'center',
+      drawerIcon: ({color, size}) => <Ionicons name="star" color={color} size={size} />
+    }}/>
   </Drawer.Navigator>
 }
 
