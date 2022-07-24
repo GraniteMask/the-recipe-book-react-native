@@ -12,11 +12,13 @@ function MealDetailScreen({route}){
         <Image source={{ uri: selectedMeal.imageUrl }}/>
         <Text>{selectedMeal.title}</Text>
         <MealDetails duration={selectedMeal.duration} affordability={selectedMeal.affordability} complexity={selectedMeal.complexity}/>
-        <View style={styles.details}>
-            <Text style={styles.detailItem}>{duration}m</Text>
-            <Text style={styles.detailItem}>{complexity.toUpperCase()}</Text>
-            <Text style={styles.detailItem}>{affordability.toUpperCase()}</Text>
-        </View>
+
+        <Text>Ingredients</Text>
+        {selectedMeal.ingredients.map(ingredient => <Text key={ingredient}>{ingredient}</Text>)}
+
+        <Text>Steps</Text>
+        {selectedMeal.steps.map(step => <Text key={step}>{step}</Text>)}
+
     </View>
 }
 
