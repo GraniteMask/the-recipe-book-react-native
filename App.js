@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
+import { Button, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
 import CategoriesScreen from './screens/CategoriesScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -20,6 +20,7 @@ export default function App() {
         }}>
           <Stack.Screen name="MealsCategories" component={CategoriesScreen} options={{
             title: 'All Categories',
+            headerTitleAlign: 'center'
             // headerStyle: {backgroundColor: '#351401'},
             // headerTintColor: 'white',
             // contentStyle: { backgroundColor: '#3f2f25' }
@@ -32,7 +33,13 @@ export default function App() {
           //   }
           // }}
           />
-          <Stack.Screen name="MealDetail" component={MealDetailScreen}/>
+          <Stack.Screen name="MealDetail" component={MealDetailScreen} 
+          // options={{
+          //   headerRight: () => {
+          //     return <Button title='In the header' />                          // This method is not useful if we want to do direct communication from the screen page itself. For that we need to
+          //   }                                                                     add these in the screen page. see the MealDetailScreen page for more info.
+          // }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
      
