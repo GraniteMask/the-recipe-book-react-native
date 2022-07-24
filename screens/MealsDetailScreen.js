@@ -1,4 +1,5 @@
 import { Image, StyleSheet, Text, View } from "react-native"
+import List from "../components/MealDetail/List"
 import Subtitle from "../components/MealDetail/Subtitle"
 import MealDetails from "../components/MealDetails"
 import { MEALS } from '../data/dummy-data'
@@ -20,10 +21,10 @@ function MealDetailScreen({route}){
         />
 
         <Subtitle>Ingredients</Subtitle>
-        {selectedMeal.ingredients.map(ingredient => <Text key={ingredient}>{ingredient}</Text>)}
+        <List data={selectedMeal.ingredients}/>
 
         <Subtitle>Steps</Subtitle>
-        {selectedMeal.steps.map(step => <Text key={step}>{step}</Text>)}
+        <List data={selectedMeal.steps}/>
 
     </View>
 }
