@@ -20,25 +20,21 @@ function MealDetailScreen({route, navigation}){
 
     function changeFavoriteStatusHandler(){
         if(mealIsFavorite){
-            dispatch(removeFavorite())
+            dispatch(removeFavorite({id: mealId}))
         }else{
             dispatch(addFavorite({id: mealId}))
         }
     }
 
-    function headerButtonPressHandler(){
-        console.log('press')
-    }
-
     useLayoutEffect(()=>{
         navigation.setOptions({
             headerRight: () =>{
-                return <IconButton onPress={headerButtonPressHandler} icon="star" color="white"/>
+                return <IconButton icon={mealIsFavorite ? 'star' : 'star-outline'} color="white" onPress={changeFavoriteStatusHandler}/>
             },
             title: 'About the Dish', 
             headerTitleAlign: 'center'
         })
-    },[])
+    },[changeFavoriteStatusHandler, navigation])
 
     return <ScrollView style={{marginBottom: 15}}>
         <Image style={styles.image} source={{ uri: selectedMeal.imageUrl }}/>
