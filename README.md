@@ -1,4 +1,4 @@
-# the-recipe-book-react-native
+# The Recipe Book
 A recipe book app made with love to satisfy your cravings. 
 
 ## Highlighted Features:
