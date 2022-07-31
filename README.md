@@ -6,16 +6,17 @@ Check out the app's working video: https://drive.google.com/file/d/1IN2JjOOmqktp
 ## App Screenshots:
 
 ### Home Screen
-![Home Page](https://github.com/GraniteMask/the-recipe-book-react-native/blob/master/HomePage.jpeg?raw=true)
+![image](https://user-images.githubusercontent.com/63235918/182041619-6d123e51-7457-49b3-8ce1-500f292a3eb0.png)
 
 ### Recipe List under 'Quick & Easy Category'
-![Recipe List](https://github.com/GraniteMask/the-recipe-book-react-native/blob/master/recipeList.jpeg?raw=true)
+![image](https://user-images.githubusercontent.com/63235918/182041635-d95fc8ac-8e21-4332-8cf9-1b1b7831e26e.png)
 
 ### Recipe Details of 'Toast Hawaii'
-![Recipe List](https://github.com/GraniteMask/the-recipe-book-react-native/blob/master/receipeDetails.jpeg?raw=true)
+![image](https://user-images.githubusercontent.com/63235918/182041649-f325217d-7af6-49b1-a80f-4ccde3d118de.png)
 
 ### Your Favorites Screen
-![Recipe List](https://github.com/GraniteMask/the-recipe-book-react-native/blob/master/favoriteList.jpeg?raw=true)
+![image](https://user-images.githubusercontent.com/63235918/182041665-0e991f33-b8f5-4cfb-8212-191a27d623cd.png)
+
 
 ## Highlighted Features:
 
